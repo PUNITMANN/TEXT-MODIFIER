@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TEXT MODIFIER</title>
+    <style>
+
+    .navbar{
+            display: flex;
+            justify-content: start;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            background-color:#212529;
+            color:white;
+<!--            width: 1343px;-->
+            width: 100%;
+            padding: 2px;
+
+          }
+        div{
+            font-size: 12px;
+        }
+        .bdyy{
+margin:0px;
+}
+.cls1{
+    margin-right: 10px;
+    color:white;
+    margin-left:10px;
+    }
+
+
+a{
+    color: white;
+    text-decoration: none;
+}
+a:hover{
+    color: yellow;
+}
+
+        h1{
+        text-align:center;
+        }
+
+
+        #div1 {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size : 25px;
+
+            margin: 15px;
+            height:450px;
+}
+.h4{
+color: white;
+            background-color: black;
+            height:40px;
+}
+.h1 {
+    font-size: 30px;
+  text-align:center
+
+}
+
+
+
+.texts{
+            border: 3px solid black;
+            width: 700px;
+            height: 40px;
+            font-size:30px;
+        }
+        .describe{
+            border: 3px solid black;
+            width: 700px;
+            height: 200px;
+            text-align:start;
+            font-size:30px;
+
+        }
+        .container{
+            margin: 10px 0px 0px 0px;
+            display: grid;
+            align-content: center;
+            justify-content: center;
+            width: 100%;
+
+        }
+        #btn{
+    size: 10px;
+    padding: 10px;
+    background-color: black;
+    color: white;
+}
+#btn:hover{
+    color: white;
+    background-color:grey;
+}
+b{
+font-size:20px;
+}
+.contacthead{
+margin-top:0px;
+font-size: 30px;
+}
+p{
+font-size:30px;
+margin-left:10px;
+}
+.btnnn{
+        margin-left:650px;
+        height:50px;
+        width:200px;
+        background-color:black;
+        color:white;
+}
+.btnnn:hover{
+background-color:grey;
+        color:white;
+}
+hr{
+height:5px;
+background-color:black;
+}
+.foot{
+text-align:center;
+background-color:black;
+color:white;
+height:30px;
+}
+
+
+    </style>
+</head>
+<body class="bdyy">
+<nav class="navbar">
+      <div class="cls1">
+     <h1><a href="/">TEXT MODIFIER</a></h1>
+        </div>
+
+        <div class="cls1">
+            <h1><a href="/textmodifier">HOME</a></h1>
+        </div>
+        <div class="cls1">
+            <h1><a href="/textmodifier/about.html">ABOUT US</a></h1>
+        </div>
+ <div class="cls1">
+     <h1><a href="/textmodifier/contact.html/">CONTACT US</a></h1>
+        </div>
+    </nav>
+
+
+<h1>*****WELCOME TO TEXT MODIFIER*****</h1>
+<p> TEXT MODIFIER is an Indian Website based in Delhi, India. Founded by Punit Kumar in 2021, the company initially focused on free Modification of your Texts.</p><br>
+      <p>Here you can modify your text to Upper case, Lower case, Title Uppercsase, Sentence case, Count Characters,Removing new lines, Removing extraspace, Remove numbers, Remove puntuations.</p>
+      <p>Also you can ask your Queries from TEXT MODIFY Team.</p>
+
+    <div>
+    <a href="/textmodifier"><button class="btnnn" >MODIFY YOUR TEXT NOW</button></a>
+    </div>
+<hr>
+<section>
+     <h1 class="h1">*****WE PROVIDE FREE TOOLS TO HELP YOU WITH YOUR DAILY TASKS.*****</h1>
+
+
+            <div id="div1">
+                <h4 class="h4">YOU CAN USE THIS WEBSITE TO MODIFY YOUR TEXTS WITH THE HELP OF THESE TOOLS</h4>
+                <ol>
+                    <li>UPPER CASE- HERE YOU CAN MODIFY YOUR TEXT TO UPPER CASE.</li>
+                    <li>LOWER CASE- HERE YOU CAN MODIFY YOUR TEXT TO LOWER CASE.</li>
+                    <li>UPPER-TITLE CASE- HERE YOU CAN MODIFY YOUR TEXT TO UPPER-TITLE CASE.</li>
+                    <li>CAPITALIZE SENTENCE FIRST LETTER- HERE YOU CAN MODIFY YOUR EVERY SENTENCE FIRST-LETTER TO UPPER-TITLE CASE.</li>
+                    <li>COUNT CHARACTERS- HERE YOU CAN COUNT NUMBERS OF TEXTS OR NUMBERS OF CHARACTERS.</li>
+                    <li>REMOVE NEWLINE- HERE YOU CAN MODIFY YOUR TEXT BY REMOVING EXTRA-LINES.</li>
+                    <li>REMOVE EXTRASCPACE- HERE YOU CAN MODIFY YOUR TEXT BY REMOVING EXTRA-SPACE.</li>
+                    <li>REMOVE NUMBER- HERE YOU CAN REMOVE NUMBER FROM YOUR TEXT.</li>
+                    <li>REMOVE PUNCTUATIONS-HERE YOU CAN REMOVE PUNCTUATIONS LIKE(! ( ) - [ ] { } ; : ' " \ , < > ./ ? @ # $ % ^ & * _ ~).</li>
+
+</ol>
+    </div>
+
+</section>
+<hr>
+<section>
+
+    <h1 class="contacthead">*****YOU CAN CONTACT US FOR YOUR QUERIES*****</h1>
+
+    <div class="container">
+    <form action="/" method="POST">{% csrf_token %}
+
+        <div>
+        <label for="name"><b>Name</b></label><br>
+            <input class="texts" type="text" name='name' id="name" placeholder="Enter Your Name">
+        </div>
+        <br>
+        <div>
+            <label for="name"><b>Email</b></label><br>
+        <input class="texts" type="email" id="email" name='email' placeholder="Enter Your Email">
+        </div>
+
+        <div>
+            <label for="name"><b>Phone Number:</b></label><br>
+        <input class="texts" type="number" name='phone' id="phone" placeholder="Enter Your Contact Number">
+        </div>
+
+        <div>
+            <label for="desc"><b>How May We Help You?</b></label><br>
+        <textarea class="describe" name='desc' id="desc" rows="9" placeholder="How May We Help You..."></textarea>
+        </div>
+
+        <br>
+
+          <div>
+            <input type="submit" value="submit" id="btn" onclick="myFunction()">
+        </div>
+
+    </form>
+</div>
+
+</section>
+<div>
+    <footer >
+        <h2 class="foot">Copyright &#169; 2021 TEXT MODIFIER | All Right Reserved.</h2>
+    </footer>
+
+</div>
+<script>
+    function myFunction() {
+    alert("Your Form has been Successfully Submitted !");
+}
+</script>
+
+</body>
+</html>

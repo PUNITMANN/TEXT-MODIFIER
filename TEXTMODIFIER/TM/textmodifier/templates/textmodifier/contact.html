@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CONTACT ME</title>
+    <style>
+        .navbar{
+            display: flex;
+            justify-content: start;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            background-color:#212529;
+            color:white;
+<!--            width: 1343px;-->
+            width: 100%;
+            padding: 2px;
+
+          }
+        div{
+            font-size: 12px;
+        }
+        .bdyy{
+margin:0px;
+}
+.cls1{
+    margin-right: 10px;
+    color:white;
+    margin-left:10px;
+    }
+
+
+a{
+    color: white;
+    text-decoration: none;
+}
+a:hover{
+    color: yellow;
+}
+
+        .texts{
+            border: 3px solid black;
+            width: 700px;
+            height: 40px;
+            font-size:30px;
+        }
+        .describe{
+            border: 3px solid black;
+            width: 700px;
+            height: 200px;
+            text-align:start;
+            font-size:30px;
+            
+        }
+        .container{
+            margin: 10px 0px 0px 0px;
+            display: grid;
+            align-content: center;
+            justify-content: center;
+            width: 100%;
+            
+        }
+        #btn{
+    size: 10px;
+    padding: 10px;
+    background-color: black;
+    color: white;
+}
+#btn:hover{
+    color: white;
+    background-color:grey;
+}
+b{
+font-size:20px;
+}
+.h1{
+text-align:center;
+font-size: 30px;
+}
+.foot{
+text-align:center;
+background-color:black;
+color:white;
+height:30px;
+}
+    </style>
+</head>
+
+<body class="bdyy">
+
+<nav class="navbar">
+      <div class="cls1">
+     <h1><a href="/">TEXT MODIFIER</a></h1>
+        </div>
+
+        <div class="cls1">
+            <h1><a href="/textmodifier">HOME</a></h1>
+        </div>
+        <div class="cls1">
+            <h1><a href="/textmodifier/about.html">ABOUT US</a></h1>
+        </div>
+ <div class="cls1">
+     <h1><a href="/textmodifier/contact.html/">CONTACT US</a></h1>
+        </div>
+    </nav>
+
+<h1 class="h1">*****YOU CAN CONTACT US FOR YOUR QUERIES*****</h1>
+        
+    <div class="container">
+    <form action="/textmodifier/contact.html/" method="POST">{% csrf_token %}
+
+        <div>
+        <label for="name"><b>Name</b></label><br>
+            <input class="texts" type="text" name='name' id="name" placeholder="Enter Your Name">
+        </div>
+        <br>
+        <div>
+            <label for="name"><b>Email</b></label><br>
+        <input class="texts" type="email" id="email" name='email' placeholder="Enter Your Email">
+        </div>
+
+        <div>
+            <label for="name"><b>Phone Number:</b></label><br>
+        <input class="texts" type="number" name='phone' id="phone" placeholder="Enter Your Contact Number">
+        </div>
+
+        <div>
+            <label for="desc"><b>How May We Help You?</b></label><br>
+        <textarea class="describe" name='desc' id="desc" rows="9" placeholder="How May We Help You..."></textarea>
+        </div>
+
+        <br>
+
+          <div>
+            <input type="submit" value="submit" id="btn" onclick="myFunction()">
+        </div>
+
+    </form>
+</div>
+</body>
+<div>
+    <footer >
+        <h2 class="foot">Copyright &#169; 2021 TEXT MODIFIER | All Right Reserved.</h2>
+    </footer>
+
+</div>
+<script>
+function myFunction() {
+    alert("Your Form has been Successfully Submitted !");
+}
+</script>
+
+</html>

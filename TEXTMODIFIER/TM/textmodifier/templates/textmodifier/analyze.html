@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+    <title>Your Modified Text</title>
+    <style>
+.navbar{
+
+            display: flex;
+            justify-content: start;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            background-color:#212529;
+            color:white;
+<!--            width: 1343px;-->
+            width: 100%;
+            padding: 2px;
+
+          }
+        div{
+            font-size: 12px;
+        }
+        .bdyy{
+margin:0px;
+}
+.cls1{
+    margin-right: 10px;
+    color:white;
+    margin-left:10px;
+    }
+
+a{
+    color: white;
+    text-decoration: none;
+}
+a:hover{
+    color: yellow;
+}
+
+.pree{
+  color: brown;
+  font-weight: bold;
+  font-size: 25px;
+  padding: 10px;
+  margin-top:0px;
+  border: 2px solid black;
+  background-color: powderblue;
+  width: auto;
+  height:auto;
+  white-space: initial;
+}
+
+.success{
+  font-size: 30px;
+  text-align:center;
+}
+.purp{
+  font-weight: bold;
+font-size: 25px;
+width: 100%;
+background-color:black;
+color:white;
+}
+.btnnn{
+  padding: 10px;
+  background-color: black;
+  color:white;
+}
+.btnnn:hover{
+  background-color: grey;
+  color: white;
+}
+.btnnnn{
+  padding: 5px;
+  background-color: black;
+  color:white;
+  width:200px;
+<!--  margin:10px;-->
+
+}
+.btnnnn:hover{
+  background-color: grey;
+  color: white;
+}
+.cpy{
+margin-left:50%;
+}
+.foot{
+text-align:center;
+background-color:black;
+color:white;
+height:30px;
+
+}
+
+
+
+    </style>
+  </head>
+<body class="bdyy">
+
+ <nav class="navbar">
+      <div class="cls1">
+     <h1><a href="/">TEXT MODIFIER</a></h1>
+        </div>
+
+        <div class="cls1">
+            <h1><a href="/textmodifier">HOME</a></h1>
+        </div>
+        <div class="cls1">
+            <h1><a href="/textmodifier/about.html">ABOUT US</a></h1>
+        </div>
+ <div class="cls1">
+     <h1><a href="/textmodifier/contact.html">CONTACT US</a></h1>
+        </div>
+    </nav>
+
+    
+
+<div>
+  <h1 class="success">*****SUCCESS! YOUR TEXT HAS BEEN MODIFIED...NOW YOU CAN USE IT*****</h1>
+</div>
+
+<div>
+  <div class="purp">{{purpose}}</div>
+
+  <div class="analy">
+
+      <p>
+      <pre class="pree" id="copy-text" >{{ modified_text}}</pre>
+      </p>
+
+  </div>
+ <div class="cpy" >
+<button class="btnnnn"  onclick="copy()">
+        Copy Text
+    </button>
+</div>
+    <a href="/textmodifier"><button class="btnnn">BACK</button></a>
+  </div>
+
+
+    <footer >
+        <h2 class="foot">Copyright &#169; 2021 TEXT MODIFIER | All Right Reserved.</h2>
+    </footer>
+
+
+
+  </body>
+  <script>
+
+        function copy() {
+
+        if (document.selection) {
+    var range = document.body.createTextRange();
+    range.moveToElementText(document.getElementById("copy-text"));
+    range.select().createTextRange();
+    document.execCommand("copy");
+
+  } else if (window.getSelection) {
+    var range = document.createRange();
+    range.selectNode(document.getElementById("copy-text"));
+    window.getSelection().addRange(range);
+    document.execCommand("copy");
+    alert('Text Copied')
+
+  }
+
+      }
+  </script>
+</html>
